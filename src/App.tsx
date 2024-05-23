@@ -1,15 +1,11 @@
-export const App = () => {
+import React from 'react';
+import Registration from './Components/Registration';
+
+const App: React.FC = () => {
   return (
-    <div className="container">
-      <header>
-        <div className="logo" />
-        <h1>Webová aplikace</h1>
-      </header>
-      <main>
-        <p>
-          Startovací šablona pro webovou aplikaci v Reactu.
-        </p>
-      </main>
+    <div className="App">
+      <h1>Registration Form</h1>
+      <Registration />
     </div>
   );
 };
