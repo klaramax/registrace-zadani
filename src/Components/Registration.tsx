@@ -38,6 +38,17 @@ const Registration: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); //Zastaví výchozí chování formuláře
     console.log(user);
+
+    // Vyprázdnění formuláře po odeslání
+    setUser({
+      username: '',
+      email: '',
+      password: '',
+      passwordConfirm: '',
+    });
+
+    // Zobrazení alertu po odeslání formuláře
+    alert('Formulář byl odeslán.');
   };
 
   return (
