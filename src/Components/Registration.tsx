@@ -37,8 +37,15 @@ const Registration: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); //Zastaví výchozí chování formuláře
-    console.log(user);
 
+    // Kontrola, zda hesla a potvrzení hesla jsou stejné
+    if (user.password !== user.passwordConfirm) {
+      alert('Hesla se neshodují.');
+      return;
+    }
+
+    console.log(user);
+    
     // Vyprázdnění formuláře po odeslání
     setUser({
       username: '',
